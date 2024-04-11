@@ -1,0 +1,23 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Cursos</title>
+	<link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+
+<body>
+	<h1 id="title">Cadastro de Usuário</h1>
+	<p>Insira os dados necessários no formulário abaixo:</p>
+	<form action="#" th:action="@{/save}" th:object="${curso}" method="post" id = "form">
+		<label for="nome">Nome:</label><br>
+		<input type="text" id="nome" th:field="*{nome}"><br>
+		<label for="ativo">Ativo (S/N):</label><br>
+		<input type="text" id="ativo" th:field="*{ativo}"><br>
+		<label for="dtCad">Data de Cadastro (dd/MM/yyyy):</label><br>
+		<input type="text" id="dtCad" th:field="*{dtCad}"><br>
+		<button type="submit">Cadastrar</button>
+	</form>
+</body>
+
+</html>
